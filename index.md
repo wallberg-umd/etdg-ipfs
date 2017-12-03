@@ -15,7 +15,15 @@ output: index.html
 
 -- 
 
-### InterPlanetary File System
+### IPFS - Content Addressed, Versioned, P2P File System
+
+The InterPlanetary File System (IPFS) is a peer-to-peer distributed file system that seeks to connect all computing devices with the same system of files. In some ways, IPFS is similar to the Web, but IPFS could be seen as a single BitTorrent swarm, exchanging objects within one Git repository.
+
+[IPFS White Paper](https://github.com/ipfs/papers/raw/master/ipfs-cap2pfs/ipfs-p2p-file-system.pdf)
+
+--
+
+### Intro: InterPlanetary File System
 
 Initially designed by Juan Benet, developed since 2014 by [Protocol Labs](https://protocol.ai/) with help from the open-source community.
 
@@ -25,22 +33,14 @@ Synthesis of existing concepts and technologies
 
 --
 
-### IPFS - Content Addressed, Versioned, P2P File System
-
-The InterPlanetary File System (IPFS) is a peer-to-peer distributed file system that seeks to connect all computing devices with the same system of files. In some ways, IPFS is similar to the Web, but IPFS could be seen as a single BitTorrent swarm, exchanging objects within one Git repository.
-
-[IPFS White Paper](https://github.com/ipfs/papers/raw/master/ipfs-cap2pfs/ipfs-p2p-file-system.pdf)
-
---
-
-### InterPlanetary?
+### Intro: InterPlanetary?
 
 * no other planets participating, yet
 * designed for scale, globally and beyond
 
 --
 
-### Resources
+### Intro: Resources
 
 * [ipfs.io](https://ipfs.io)
   * [Homepage copy via IPFS public gateway](https://ipfs.io/ipfs/QmVb7nota99V3ypeX63eS6bAZLUQ42Gg5W6jXdRvhJh2u3/index.html)
@@ -48,7 +48,7 @@ The InterPlanetary File System (IPFS) is a peer-to-peer distributed file system 
 * [Decentralized Web Primer](https://www.gitbook.com/book/flyingzumwalt/decentralized-web-primer/details)
 --
 
-### Code4Lib Conference
+### Intro: Code4Lib Conference
 
 And now for some shameless advertising
 
