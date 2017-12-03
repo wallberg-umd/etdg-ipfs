@@ -1,5 +1,7 @@
-# dcfug2017-10
+# etdg-ipfs
 
-UMD Libraries, DC Fedora User Group 2017 Fall Presentation 
+UMD Libraries, Emerging Technologies Discussion Group, December 5, 2017
 
-https://umd-lib.github.io/dcfug2017-10/
+InterPlanetary File System
+
+https://wallberg-umd.github.io/etdg-ipfs/index.html
