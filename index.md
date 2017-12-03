@@ -87,11 +87,87 @@ And now for some shameless advertising
 ```
 brew install ipfs
 ipfs init
+ipfs cat /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/readme
 ipfs id
 ipfs swarm peers
 ```
 
 --
+
+### Demo: Adding files
+
+Take a picture and it to the local repository
+
+```
+ipfs add ~/Pictures/Photo\ Booth\ Library/Pictures/XXX.jpg
+```
+
+Copy the resulting hash
+
+--
+
+### Demo: Getting files out
+
+Get the file back out (addressed by hash)
+
+```
+ipfs cat <hash> | open -f -a /Applications/Preview.app
+```
+
+Get it from the global gateway?
+
+```
+curl https://ipfs.io/ipfs/<HASH>
+```
+
+--
+
+### Demo: Running the daemon
+
+Connect to the swarm and become a peer in the global network
+
+```
+ipfs daemon
+```
+
+Try again to retrieve via the global gateway
+
+```
+curl https://ipfs.io/ipfs/<hash> | open -f -a /Applications/Preview.app
+```
+
+--
+
+### Demo: Stream a video
+
+```
+ipfs cat /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/quick-start
+ipfs cat QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse/video.mp4 | mplayer -
+
+# Kill the daemon and play again, because cached in the local repo
+ipfs cat QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse/video.mp4 | mplayer -
+
+# Remove from the local repo and try again
+ipfs repo gc
+ipfs cat QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse/video.mp4 | mplayer -
+
+# Restart the daemon to get the video again
+```
+
+--
+
+### Demo: mount in the filesystem via FUSE
+
+```
+ipfs mount
+ls /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv
+more /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/about
+```
+
+
+
+
+
 
 
 
