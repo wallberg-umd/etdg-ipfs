@@ -40,16 +40,12 @@ The InterPlanetary File System (IPFS) is a peer-to-peer distributed file system 
 
 --
 
-### IPFS speaks for itself
+### Resources
 
-[ipfs.io](https://ipfs.io)
-
-Or the homepage cached and distributed using IPFS:
-
-[Via public gateway](https://ipfs.io/ipfs/QmVb7nota99V3ypeX63eS6bAZLUQ42Gg5W6jXdRvhJh2u3/index.html)
-
-[Via local IPFS daemon](http://localhost:8080/ipfs/QmVb7nota99V3ypeX63eS6bAZLUQ42Gg5W6jXdRvhJh2u3/index.html)
-
+* [ipfs.io](https://ipfs.io)
+  * [Homepage copy via IPFS public gateway](https://ipfs.io/ipfs/QmVb7nota99V3ypeX63eS6bAZLUQ42Gg5W6jXdRvhJh2u3/index.html)
+  * [Homepage copy via IPFS local daemon](http://localhost:8080/ipfs/QmVb7nota99V3ypeX63eS6bAZLUQ42Gg5W6jXdRvhJh2u3/index.html)
+* [Decentralized Web Primer](https://www.gitbook.com/book/flyingzumwalt/decentralized-web-primer/details)
 --
 
 ### Code4Lib Conference
@@ -95,8 +91,7 @@ ipfs id
 ipfs swarm peers
 ```
 
-But inline: `ls *`
-
 --
+
 
 
