@@ -1,7 +1,9 @@
-title: InterPlanetary File System |
+title: InterPlanetary File System | ETDG
+date: 2017-12-05
 author:
   name: Ben Wallberg
   email: wallberg@umd.edu
+  url: https://wallberg-umd.github.io/etdg-ipfs/
 theme: theme
 output: index.html
 
@@ -10,6 +12,16 @@ output: index.html
 # InterPlanetary File System
 ##Emerging Technology Discussion Group
 ##December 5, 2017
+
+-- 
+
+### InterPlanetary File System
+
+Initially designed by Juan Benet, developed since 2014 by [Protocol Labs](https://protocol.ai/) with help from the open-source community.
+
+Alpha Release
+
+Synthesis of existing concepts and technologies
 
 --
 
@@ -48,3 +60,43 @@ And now for some shameless advertising
 * Washington, D.C, February 13-16, 2018
 * http://2018.code4lib.org/
 * multi-day ETDG!
+
+--
+
+### Concept: Content Addressed
+
+* Not device addressed
+* Hashing (Qm?)
+
+--
+
+### Concept: Peer-to-Peer (P2P)
+
+* BitTorrent
+* Swarm of peers
+* Chunked
+
+--
+
+### Concept: Git / Merkle DAG 
+
+--
+
+### Concept: Immutability
+
+--
+
+### Demo: Getting Started
+
+```
+brew install ipfs
+ipfs init
+ipfs id
+ipfs swarm peers
+```
+
+But inline: `ls *`
+
+--
+
+
