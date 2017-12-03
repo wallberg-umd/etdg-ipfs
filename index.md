@@ -23,7 +23,7 @@ The InterPlanetary File System (IPFS) is a peer-to-peer distributed file system 
 
 --
 
-### Intro: InterPlanetary File System
+### Introduction: InterPlanetary File System
 
 Initially designed by Juan Benet, developed since 2014 by [Protocol Labs](https://protocol.ai/) with help from the open-source community.
 
@@ -33,14 +33,14 @@ Synthesis of existing concepts and technologies
 
 --
 
-### Intro: InterPlanetary?
+### Introduction: InterPlanetary?
 
 * no other planets participating, yet
 * designed for scale, globally and beyond
 
 --
 
-### Intro: Resources
+### Introduction: Resources
 
 * [ipfs.io](https://ipfs.io)
   * [Homepage copy via IPFS public gateway](https://ipfs.io/ipfs/QmVb7nota99V3ypeX63eS6bAZLUQ42Gg5W6jXdRvhJh2u3/index.html)
@@ -48,7 +48,7 @@ Synthesis of existing concepts and technologies
 * [Decentralized Web Primer](https://www.gitbook.com/book/flyingzumwalt/decentralized-web-primer/details)
 --
 
-### Intro: Code4Lib Conference
+### Introduction: Code4Lib Conference
 
 And now for some shameless advertising
 
@@ -61,24 +61,29 @@ And now for some shameless advertising
 
 ### Concept: Content Addressed
 
-* Not device addressed
-* Hashing (Qm?)
+* Not device addressed, as in the hostname of the URL (eg, www.lib.umd.edu)
+* Cryptographic Hash of the contents of a file (actually a block)
+
+
+-- 
+
+### Concept: Content Addressed
+
+IPFS represents the hash of files and objects using Multihash format and Base58 encoding. The letters "Qm" happen to correspond with the algorithm (SHA-256) and length (32 bytes) used by IPFS.
+
+Other algorithms and lengths could be used.
+
+https://github.com/ipfs/faq/issues/22
 
 --
 
-### Concept: Peer-to-Peer (P2P)
-
-* BitTorrent
-* Swarm of peers
-* Chunked
+### Concept: Git / Merkle Directed Acyclic Graph (DAG) 
 
 --
 
-### Concept: Git / Merkle DAG 
+### Concept: Immutability & Versioning
 
---
-
-### Concept: Immutability
+Different versions hash differently
 
 --
 
@@ -88,8 +93,6 @@ And now for some shameless advertising
 brew install ipfs
 ipfs init
 ipfs cat /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/readme
-ipfs id
-ipfs swarm peers
 ```
 
 --
@@ -122,12 +125,23 @@ curl https://ipfs.io/ipfs/<HASH>
 
 --
 
+### Concept: Peer-to-Peer (P2P)
+
+* BitTorrent
+* Swarm of peers
+* Chunked
+
+--
+
 ### Demo: Running the daemon
 
 Connect to the swarm and become a peer in the global network
 
 ```
+ipfs id
+ipfs swarm peers
 ipfs daemon
+ipfs swam peers
 ```
 
 Try again to retrieve via the global gateway
