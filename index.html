@@ -645,7 +645,7 @@ ipfs cat /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/readme</code></pre
     <section class="slide-content"><h3 id="concept-peer-to-peer-p2p-">Concept: Peer-to-Peer (P2P)</h3>
 <ul>
 <li>Like BitTorrent: swarm of peers</li>
-<li>Like BittTorrent: files distributed as chunks</li>
+<li>Like BitTorrent: files distributed as chunks</li>
 <li>But, no central torrent file</li>
 </ul>
 <p><img src="295px-Unstructured_peer-to-peer_network_diagram.png" alt="Unstructured, peer-to-peer network diagram"></p>
@@ -653,15 +653,6 @@ ipfs cat /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/readme</code></pre
 </section>
   </div>
   <div class="slide hidden" id="slide-14">
-    <section class="slide-content"><h3 id="concept-peer-to-peer-p2p-">Concept: Peer-to-Peer (P2P)</h3>
-<ul>
-<li>Swarm of peers</li>
-<li>Chunked</li>
-<li>No central torrent file</li>
-</ul>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-15">
     <section class="slide-content"><h3 id="demo-running-the-daemon">Demo: Running the daemon</h3>
 <p>Connect to the swarm and become a peer in the global network</p>
 <pre><code>ipfs id
@@ -670,9 +661,11 @@ ipfs daemon
 ipfs swam peers</code></pre>
 <p>Try again to retrieve via the global gateway</p>
 <pre><code>curl https://ipfs.io/ipfs/&lt;hash&gt; | open -f -a /Applications/Preview.app</code></pre>
+<p>Or grab a local copy</p>
+<pre><code>ipfs get &lt;hash&gt;</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-16">
+  <div class="slide hidden" id="slide-15">
     <section class="slide-content"><h3 id="demo-stream-a-video">Demo: Stream a video</h3>
 <pre><code>ipfs cat /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/quick-start
 ipfs cat QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse/video.mp4 | mplayer -
@@ -687,23 +680,25 @@ ipfs cat QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse/video.mp4 | mplayer -
 # Restart the daemon to get the video again</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-17">
+  <div class="slide hidden" id="slide-16">
     <section class="slide-content"><h3 id="demo-mount-in-the-filesystem-via-fuse">Demo: mount in the filesystem via FUSE</h3>
 <pre><code>ipfs mount
 ls /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv
 more /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/about</code></pre>
 </section>
   </div>
+  <div class="slide hidden" id="slide-17">
+    <section class="slide-content"><h3 id="concept-merkle-directed-acyclic-graph-dag-">Concept: Merkle Directed Acyclic Graph (DAG)</h3>
+<p>Like Git</p>
+<ul>
+<li>Graph: network of nodes (vertices)</li>
+<li>Directed: Edges are links from one node to another (and not the reverse)</li>
+<li>Acyclic: No cycle back to a previous node</li>
+<li>Merkle: includes hashes</li>
+</ul>
+</section>
+  </div>
   <div class="slide hidden" id="slide-18">
-    <section class="slide-content"><h3 id="concept-git-merkle-directed-acyclic-graph-dag-">Concept: Git / Merkle Directed Acyclic Graph (DAG)</h3>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-19">
-    <section class="slide-content"><h3 id="concept-immutability-versioning">Concept: Immutability &amp; Versioning</h3>
-<p>Different versions hash differently</p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-20">
     <section class="slide-content"><h3 id="concept-files">Concept: Files</h3>
 <ol>
 <li>block:  a variable-size block of data.</li>
@@ -713,16 +708,26 @@ more /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/about</code></pre>
 </ol>
 </section>
   </div>
-  <div class="slide hidden" id="slide-21">
-    <section class="slide-content"><h3 id="demo-files">Demo: Files</h3>
-<p><a href="http://localhost:5001/ipfs/QmPhnvn747LqwPYMJmQVorMaGbMSgA7mRRoyyZYz3DoZRQ/#/objects/\ipfs\QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse">http://localhost:5001/ipfs/QmPhnvn747LqwPYMJmQVorMaGbMSgA7mRRoyyZYz3DoZRQ/#/objects/\ipfs\QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse</a></p>
+  <div class="slide hidden  " id="slide-19">
+    <section class="slide-content"><h3 id="demo-merkle-dag-files">Demo: Merkle DAG / Files</h3>
+<p>Traverse the graph for the quick start video folder</p>
+<pre><code>ipfs ls -v QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse
+ipfs ls -v QmRS3Ts9HGTPrNyvHc8GujKJRa3znuEANvE8eK8bdUDAGo
+ipfs ls -v QmQkHpST7LL6zeLkVTFgTmSdbmnQaD8iWkutLhe9UHUvwq
+ipfs ls -v Qma4yxBN8gMB3GotHuM2hhRJ3nZRXr1Pdrj9Fsh1hyKQQT</code></pre>
+<p>Or visit the <a href="http://localhost:5001/ipfs/QmPhnvn747LqwPYMJmQVorMaGbMSgA7mRRoyyZYz3DoZRQ/#/objects/\ipfs\QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse">web interface to your local daemon</a></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-22">
+  <div class="slide hidden" id="slide-20">
+    <section class="slide-content"><h3 id="concept-immutability-versioning">Concept: Immutability &amp; Versioning</h3>
+<p>Different versions hash differently</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-21">
     <section class="slide-content"><h3 id="concept-ipns-or-naming">Concept: IPNS or Naming</h3>
 </section>
   </div>
-  <div class="slide hidden" id="slide-23">
+  <div class="slide hidden" id="slide-22">
     <section class="slide-content"><h3 id="use-cases">Use Cases</h3>
 <ul>
 <li><p><a href="https://gateway.ipfs.io/ipfs/QmQZzfs7LjkEnmG3zU92YF7ViCcuCXkNokuYoiNe6pKvDZ/en/index.html">Catalonian Referendum</a></p>
@@ -734,7 +739,7 @@ more /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/about</code></pre>
 </ul>
 </section>
   </div>
-  <div class="slide hidden author-slide" id="slide-24">
+  <div class="slide hidden author-slide" id="slide-23">
     <section class="slide-content"><div class="author">
   <h1 class="name">Ben Wallberg</h1>
     <h3 class="url">

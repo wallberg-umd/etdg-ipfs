@@ -139,19 +139,12 @@ curl https://ipfs.io/ipfs/<hash>
 ### Concept: Peer-to-Peer (P2P)
 
 * Like BitTorrent: swarm of peers
-* Like BittTorrent: files distributed as chunks
+* Like BitTorrent: files distributed as chunks
 * But, no central torrent file
 
 ![Unstructured, peer-to-peer network diagram](295px-Unstructured_peer-to-peer_network_diagram.png)
 
 [CC0 1.0](https://en.wikipedia.org/wiki/File:Unstructured_peer-to-peer_network_diagram.png)
-
---
-
-### Concept: Peer-to-Peer (P2P)
-* Swarm of peers
-* Chunked
-* No central torrent file
 
 --
 
@@ -170,6 +163,11 @@ Try again to retrieve via the global gateway
 
 ```
 curl https://ipfs.io/ipfs/<hash> | open -f -a /Applications/Preview.app
+```
+
+Or grab a local copy
+```
+ipfs get <hash>
 ```
 
 --
@@ -202,13 +200,14 @@ more /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/about
 
 --
 
-### Concept: Git / Merkle Directed Acyclic Graph (DAG) 
+### Concept: Merkle Directed Acyclic Graph (DAG) 
 
---
+Like Git
 
-### Concept: Immutability & Versioning
-
-Different versions hash differently
+* Graph: network of nodes (vertices)
+* Directed: Edges are links from one node to another (and not the reverse)
+* Acyclic: No cycle back to a previous node
+* Merkle: includes hashes
 
 --
 
@@ -219,11 +218,25 @@ Different versions hash differently
 3. tree: a collection of blocks, lists, or other trees.
 4. commit: a snapshot in the version history of a tree.
 
+-- 
+
+### Demo: Merkle DAG / Files
+
+Traverse the graph for the quick start video folder
+```
+ipfs ls -v QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse
+ipfs ls -v QmRS3Ts9HGTPrNyvHc8GujKJRa3znuEANvE8eK8bdUDAGo
+ipfs ls -v QmQkHpST7LL6zeLkVTFgTmSdbmnQaD8iWkutLhe9UHUvwq
+ipfs ls -v Qma4yxBN8gMB3GotHuM2hhRJ3nZRXr1Pdrj9Fsh1hyKQQT
+```
+
+Or visit the [web interface to your local daemon](http://localhost:5001/ipfs/QmPhnvn747LqwPYMJmQVorMaGbMSgA7mRRoyyZYz3DoZRQ/#/objects/\ipfs\QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse)
+
 --
 
-### Demo: Files
+### Concept: Immutability & Versioning
 
-http://localhost:5001/ipfs/QmPhnvn747LqwPYMJmQVorMaGbMSgA7mRRoyyZYz3DoZRQ/#/objects/\ipfs\QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse
+Different versions hash differently
 
 --
 
