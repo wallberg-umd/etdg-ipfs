@@ -202,12 +202,18 @@ more /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/about
 
 ### Concept: Merkle Directed Acyclic Graph (DAG) 
 
-Like Git
-
-* Graph: network of nodes (vertices)
-* Directed: Edges are links from one node to another (and not the reverse)
+* Graph: network of nodes (vertices) connected to each other (edges)
+* Directed: Links go from one node to another (and not the reverse)
 * Acyclic: No cycle back to a previous node
 * Merkle: includes hashes
+
+--
+
+### Concept: Merkle Directed Acyclic Graph (DAG) 
+
+Like Git - [Git Book](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)
+
+![Git Data Model](git-data-model-3.png)
 
 --
 
@@ -240,7 +246,21 @@ Different versions hash differently
 
 --
 
-### Concept: IPNS or Naming
+### Concept: InterPlanetary Naming System (IPNS)
+
+Add a small amount of mutability to the permanent immutability that is IPFS
+
+--
+
+### Concept: InterPlanetary Naming System (IPNS)
+
+IPNS is a [PKI](https://en.wikipedia.org/wiki/Public_key_infrastructure) namespace, where names are the hashes of public keys, and the private key enables publishing new (signed) values. In both publish and resolve, the default name used is the node's own PeerID, which is the hash of its public key. 
+
+--
+
+### Demo: InterPlanetary Naming System (IPNS)
+
+https://ipfs.io/docs/examples/example-viewer/example#../ipns/readme.md
 
 --
 

@@ -689,16 +689,21 @@ more /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/about</code></pre>
   </div>
   <div class="slide hidden" id="slide-17">
     <section class="slide-content"><h3 id="concept-merkle-directed-acyclic-graph-dag-">Concept: Merkle Directed Acyclic Graph (DAG)</h3>
-<p>Like Git</p>
 <ul>
-<li>Graph: network of nodes (vertices)</li>
-<li>Directed: Edges are links from one node to another (and not the reverse)</li>
+<li>Graph: network of nodes (vertices) connected to each other (edges)</li>
+<li>Directed: Links go from one node to another (and not the reverse)</li>
 <li>Acyclic: No cycle back to a previous node</li>
 <li>Merkle: includes hashes</li>
 </ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-18">
+    <section class="slide-content"><h3 id="concept-merkle-directed-acyclic-graph-dag-">Concept: Merkle Directed Acyclic Graph (DAG)</h3>
+<p>Like Git - <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git Book</a></p>
+<p><img src="git-data-model-3.png" alt="Git Data Model"></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h3 id="concept-files">Concept: Files</h3>
 <ol>
 <li>block:  a variable-size block of data.</li>
@@ -708,7 +713,7 @@ more /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/about</code></pre>
 </ol>
 </section>
   </div>
-  <div class="slide hidden  " id="slide-19">
+  <div class="slide hidden  " id="slide-20">
     <section class="slide-content"><h3 id="demo-merkle-dag-files">Demo: Merkle DAG / Files</h3>
 <p>Traverse the graph for the quick start video folder</p>
 <pre><code>ipfs ls -v QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse
@@ -718,16 +723,27 @@ ipfs ls -v Qma4yxBN8gMB3GotHuM2hhRJ3nZRXr1Pdrj9Fsh1hyKQQT</code></pre>
 <p>Or visit the <a href="http://localhost:5001/ipfs/QmPhnvn747LqwPYMJmQVorMaGbMSgA7mRRoyyZYz3DoZRQ/#/objects/\ipfs\QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse">web interface to your local daemon</a></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-20">
+  <div class="slide hidden" id="slide-21">
     <section class="slide-content"><h3 id="concept-immutability-versioning">Concept: Immutability &amp; Versioning</h3>
 <p>Different versions hash differently</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-21">
-    <section class="slide-content"><h3 id="concept-ipns-or-naming">Concept: IPNS or Naming</h3>
+  <div class="slide hidden" id="slide-22">
+    <section class="slide-content"><h3 id="concept-interplanetary-naming-system-ipns-">Concept: InterPlanetary Naming System (IPNS)</h3>
+<p>Add a small amount of mutability to the permanent immutability that is IPFS</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-22">
+  <div class="slide hidden" id="slide-23">
+    <section class="slide-content"><h3 id="concept-interplanetary-naming-system-ipns-">Concept: InterPlanetary Naming System (IPNS)</h3>
+<p>IPNS is a <a href="https://en.wikipedia.org/wiki/Public_key_infrastructure">PKI</a> namespace, where names are the hashes of public keys, and the private key enables publishing new (signed) values. In both publish and resolve, the default name used is the node&#39;s own PeerID, which is the hash of its public key.</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-24">
+    <section class="slide-content"><h3 id="demo-interplanetary-naming-system-ipns-">Demo: InterPlanetary Naming System (IPNS)</h3>
+<p><a href="https://ipfs.io/docs/examples/example-viewer/example#../ipns/readme.md">https://ipfs.io/docs/examples/example-viewer/example#../ipns/readme.md</a></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h3 id="use-cases">Use Cases</h3>
 <ul>
 <li><p><a href="https://gateway.ipfs.io/ipfs/QmQZzfs7LjkEnmG3zU92YF7ViCcuCXkNokuYoiNe6pKvDZ/en/index.html">Catalonian Referendum</a></p>
@@ -739,7 +755,7 @@ ipfs ls -v Qma4yxBN8gMB3GotHuM2hhRJ3nZRXr1Pdrj9Fsh1hyKQQT</code></pre>
 </ul>
 </section>
   </div>
-  <div class="slide hidden author-slide" id="slide-23">
+  <div class="slide hidden author-slide" id="slide-26">
     <section class="slide-content"><div class="author">
   <h1 class="name">Ben Wallberg</h1>
     <h3 class="url">
