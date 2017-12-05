@@ -138,7 +138,17 @@ curl https://ipfs.io/ipfs/<hash>
 
 ### Concept: Peer-to-Peer (P2P)
 
-* BitTorrent
+* Like BitTorrent: swarm of peers
+* Like BittTorrent: files distributed as chunks
+* But, no central torrent file
+
+![Unstructured, peer-to-peer network diagram](295px-Unstructured_peer-to-peer_network_diagram.png)
+
+[CC0 1.0](https://en.wikipedia.org/wiki/File:Unstructured_peer-to-peer_network_diagram.png)
+
+--
+
+### Concept: Peer-to-Peer (P2P)
 * Swarm of peers
 * Chunked
 * No central torrent file
