@@ -31,6 +31,8 @@ Alpha Release
 
 Synthesis of existing concepts and technologies
 
+Aims to become the next generation distributed web, replacing HTTP
+
 --
 
 ### Introduction: InterPlanetary?
@@ -45,12 +47,11 @@ Synthesis of existing concepts and technologies
 * [ipfs.io](https://ipfs.io)
   * [Homepage copy via IPFS public gateway](https://ipfs.io/ipfs/QmVb7nota99V3ypeX63eS6bAZLUQ42Gg5W6jXdRvhJh2u3/index.html)
   * [Homepage copy via IPFS local daemon](http://localhost:8080/ipfs/QmVb7nota99V3ypeX63eS6bAZLUQ42Gg5W6jXdRvhJh2u3/index.html)
-* [Decentralized Web Primer](https://www.gitbook.com/book/flyingzumwalt/decentralized-web-primer/details)
+* [Decentralized Web Primer](https://flyingzumwalt.gitbooks.io/decentralized-web-primer/content/)
+
 --
 
 ### Introduction: Code4Lib Conference
-
-And now for some shameless advertising
 
 * I learned about IPFS at the 2017 conference
 * Washington, D.C, February 13-16, 2018
@@ -62,35 +63,43 @@ And now for some shameless advertising
 ### Concept: Content Addressed
 
 * Not device addressed, as in the hostname of the URL (eg, www.lib.umd.edu)
-* Cryptographic Hash of the contents of a file (actually a block)
+* Addressed by the cryptographic hash of the content
 
-
--- 
+--
 
 ### Concept: Content Addressed
 
-IPFS represents the hash of files and objects using Multihash format and Base58 encoding. The letters "Qm" happen to correspond with the algorithm (SHA-256) and length (32 bytes) used by IPFS.
+Hash Function
 
-Other algorithms and lengths could be used.
+Maps data of arbitrary size (message) to data of fixed size (hash)
 
-https://github.com/ipfs/faq/issues/22
-
---
-
-### Concept: Git / Merkle Directed Acyclic Graph (DAG) 
+https://en.wikipedia.org/wiki/Hash_function
 
 --
 
-### Concept: Immutability & Versioning
+### Concept: Content Addressed
 
-Different versions hash differently
+Cryptographic Hash Function
 
---
+* same input message always produces the same hash
+* quick to compute
+* infeasible to reverse
+* a small change to the message results in large change to the hash
+* infeasible to find two messages with the same hash
+
+https://en.wikipedia.org/wiki/Cryptographic_hash_function
+
+-- 
 
 ### Demo: Getting Started
 
+Install using Homebrew for Mac OS X
 ```
 brew install ipfs
+```
+
+Initialize the local repository
+```
 ipfs init
 ipfs cat /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/readme
 ```
@@ -107,6 +116,8 @@ ipfs add ~/Pictures/Photo\ Booth\ Library/Pictures/XXX.jpg
 
 Copy the resulting hash
 
+(message = IPFS header + the image file)
+
 --
 
 ### Demo: Getting files out
@@ -120,7 +131,7 @@ ipfs cat <hash> | open -f -a /Applications/Preview.app
 Get it from the global gateway?
 
 ```
-curl https://ipfs.io/ipfs/<HASH>
+curl https://ipfs.io/ipfs/<hash>
 ```
 
 --
@@ -130,6 +141,7 @@ curl https://ipfs.io/ipfs/<HASH>
 * BitTorrent
 * Swarm of peers
 * Chunked
+* No central torrent file
 
 --
 
@@ -178,7 +190,44 @@ ls /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv
 more /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/about
 ```
 
+--
 
+### Concept: Git / Merkle Directed Acyclic Graph (DAG) 
+
+--
+
+### Concept: Immutability & Versioning
+
+Different versions hash differently
+
+--
+
+### Concept: Files
+
+1. block:  a variable-size block of data.
+2. list: a collection of blocks or other lists.
+3. tree: a collection of blocks, lists, or other trees.
+4. commit: a snapshot in the version history of a tree.
+
+--
+
+### Demo: Files
+
+http://localhost:5001/ipfs/QmPhnvn747LqwPYMJmQVorMaGbMSgA7mRRoyyZYz3DoZRQ/#/objects/\ipfs\QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse
+
+--
+
+### Concept: IPNS or Naming
+
+--
+
+### Use Cases
+
+* [Catalonian Referendum](https://gateway.ipfs.io/ipfs/QmQZzfs7LjkEnmG3zU92YF7ViCcuCXkNokuYoiNe6pKvDZ/en/index.html)
+
+* [InterPlanetary Wayback (ipwb)](https://github.com/oduwsdl/ipwb) - facilitates permanence and collaboration in web archives by disseminating the contents of WARC files into the IPFS network.
+
+* Preservation - ipfs-cluster
 
 
 
