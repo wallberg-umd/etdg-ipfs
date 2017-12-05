@@ -134,6 +134,11 @@ Get it from the global gateway?
 curl https://ipfs.io/ipfs/<hash>
 ```
 
+Hash of the picture taken in the ETDG meeting:
+```
+QmSMjLHHGL24mHwjDY9Z4bpn6xfwaniFQqUbSeQaiogzhf
+```
+
 --
 
 ### Concept: Peer-to-Peer (P2P)
