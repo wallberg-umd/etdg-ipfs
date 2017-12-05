@@ -246,21 +246,40 @@ Different versions hash differently
 
 --
 
-### Concept: InterPlanetary Naming System (IPNS)
+### Concept: IPNS
+
+InterPlanetary Naming System
 
 Add a small amount of mutability to the permanent immutability that is IPFS
 
 --
 
-### Concept: InterPlanetary Naming System (IPNS)
+### Concept: IPNS
 
-IPNS is a [PKI](https://en.wikipedia.org/wiki/Public_key_infrastructure) namespace, where names are the hashes of public keys, and the private key enables publishing new (signed) values. In both publish and resolve, the default name used is the node's own PeerID, which is the hash of its public key. 
+IPNS is a [PKI](https://en.wikipedia.org/wiki/Public_key_infrastructure) namespace, where names are the hashes of public keys, and the private key enables publishing new (signed) values. 
+
+Te default name used is the node's own PeerID, which is the hash of its public key. 
 
 --
 
-### Demo: InterPlanetary Naming System (IPNS)
+### Demo: IPNS
 
-https://ipfs.io/docs/examples/example-viewer/example#../ipns/readme.md
+```
+ipfs id
+```
+
+[See IPNS example](https://ipfs.io/docs/examples/example-viewer/example#../ipns/readme.md)
+
+--
+
+### Demo: IPNS
+
+Also, utilize the DNS system with TXT records
+
+```
+dig TXT ipfs.io
+ipfs dns ipfs.io
+```
 
 --
 
@@ -270,10 +289,6 @@ https://ipfs.io/docs/examples/example-viewer/example#../ipns/readme.md
 
 * [InterPlanetary Wayback (ipwb)](https://github.com/oduwsdl/ipwb) - facilitates permanence and collaboration in web archives by disseminating the contents of WARC files into the IPFS network.
 
-* Preservation - ipfs-cluster
+* [ipscend](https://ipfs.io/blog/3-ipscend/) - Publish static web content
 
-
-
-
-
-
+* [ipfs-cluster](https://github.com/ipfs/ipfs-cluster) - Collective pinning and composition (Preservation requires copies)

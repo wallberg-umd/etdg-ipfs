@@ -729,33 +729,45 @@ ipfs ls -v Qma4yxBN8gMB3GotHuM2hhRJ3nZRXr1Pdrj9Fsh1hyKQQT</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-22">
-    <section class="slide-content"><h3 id="concept-interplanetary-naming-system-ipns-">Concept: InterPlanetary Naming System (IPNS)</h3>
+    <section class="slide-content"><h3 id="concept-ipns">Concept: IPNS</h3>
+<p>InterPlanetary Naming System</p>
 <p>Add a small amount of mutability to the permanent immutability that is IPFS</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-23">
-    <section class="slide-content"><h3 id="concept-interplanetary-naming-system-ipns-">Concept: InterPlanetary Naming System (IPNS)</h3>
-<p>IPNS is a <a href="https://en.wikipedia.org/wiki/Public_key_infrastructure">PKI</a> namespace, where names are the hashes of public keys, and the private key enables publishing new (signed) values. In both publish and resolve, the default name used is the node&#39;s own PeerID, which is the hash of its public key.</p>
+    <section class="slide-content"><h3 id="concept-ipns">Concept: IPNS</h3>
+<p>IPNS is a <a href="https://en.wikipedia.org/wiki/Public_key_infrastructure">PKI</a> namespace, where names are the hashes of public keys, and the private key enables publishing new (signed) values. </p>
+<p>Te default name used is the node&#39;s own PeerID, which is the hash of its public key.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-24">
-    <section class="slide-content"><h3 id="demo-interplanetary-naming-system-ipns-">Demo: InterPlanetary Naming System (IPNS)</h3>
-<p><a href="https://ipfs.io/docs/examples/example-viewer/example#../ipns/readme.md">https://ipfs.io/docs/examples/example-viewer/example#../ipns/readme.md</a></p>
+    <section class="slide-content"><h3 id="demo-ipns">Demo: IPNS</h3>
+<pre><code>ipfs id</code></pre>
+<p><a href="https://ipfs.io/docs/examples/example-viewer/example#../ipns/readme.md">See IPNS example</a></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-25">
+    <section class="slide-content"><h3 id="demo-ipns">Demo: IPNS</h3>
+<p>Also, utilize the DNS system with TXT records</p>
+<pre><code>dig TXT ipfs.io
+ipfs dns ipfs.io</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h3 id="use-cases">Use Cases</h3>
 <ul>
 <li><p><a href="https://gateway.ipfs.io/ipfs/QmQZzfs7LjkEnmG3zU92YF7ViCcuCXkNokuYoiNe6pKvDZ/en/index.html">Catalonian Referendum</a></p>
 </li>
 <li><p><a href="https://github.com/oduwsdl/ipwb">InterPlanetary Wayback (ipwb)</a> - facilitates permanence and collaboration in web archives by disseminating the contents of WARC files into the IPFS network.</p>
 </li>
-<li><p>Preservation - ipfs-cluster</p>
+<li><p><a href="https://ipfs.io/blog/3-ipscend/">ipscend</a> - Publish static web content</p>
+</li>
+<li><p><a href="https://github.com/ipfs/ipfs-cluster">ipfs-cluster</a> - Collective pinning and composition (Preservation requires copies)</p>
 </li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden author-slide" id="slide-26">
+  <div class="slide hidden author-slide" id="slide-27">
     <section class="slide-content"><div class="author">
   <h1 class="name">Ben Wallberg</h1>
     <h3 class="url">
