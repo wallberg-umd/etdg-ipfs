@@ -45,9 +45,8 @@ Aims to become the next generation distributed web, replacing HTTP
 ### Introduction: Resources
 
 * [ipfs.io](https://ipfs.io)
-  * [Homepage copy via IPFS public gateway](https://ipfs.io/ipfs/QmVb7nota99V3ypeX63eS6bAZLUQ42Gg5W6jXdRvhJh2u3/index.html)
-  * [Homepage copy via IPFS local daemon](http://localhost:8080/ipfs/QmVb7nota99V3ypeX63eS6bAZLUQ42Gg5W6jXdRvhJh2u3/index.html)
 * [Decentralized Web Primer](https://flyingzumwalt.gitbooks.io/decentralized-web-primer/content/)
+* [IPFS GLAM Community](https://github.com/ipfs-shipyard/ipfs-glam-community)
 
 --
 
