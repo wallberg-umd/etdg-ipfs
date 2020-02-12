@@ -10,8 +10,8 @@ output: index.html
 --
 
 # InterPlanetary File System
-##Emerging Technology Discussion Group
-##December 5, 2017
+## Emerging Technology Discussion Group
+## December 5, 2017
 
 -- 
 
@@ -138,6 +138,7 @@ Hash of the picture taken in the ETDG meeting:
 QmSMjLHHGL24mHwjDY9Z4bpn6xfwaniFQqUbSeQaiogzhf
 ```
 
+[https://ipfs.io/ipfs/QmSMjLHHGL24mHwjDY9Z4bpn6xfwaniFQqUbSeQaiogzhf](https://ipfs.io/ipfs/QmSMjLHHGL24mHwjDY9Z4bpn6xfwaniFQqUbSeQaiogzhf)
 --
 
 ### Concept: Peer-to-Peer (P2P)

@@ -139,6 +139,7 @@ pre {
   position: fixed;
   top: 0; left: 0; right: 0;
   height: 3px;
+  z-index: 1;
 }
 
 .progress-bar {
@@ -530,7 +531,6 @@ pre .chunk {
 }
 
   </style>
-    <script async src="http://localhost:35729/livereload.js"></script>
 </head>
 <body>
     <div class="progress">
@@ -588,7 +588,7 @@ pre .chunk {
   <div class="slide hidden" id="slide-7">
     <section class="slide-content"><h3 id="concept-content-addressed">Concept: Content Addressed</h3>
 <ul>
-<li>Not device addressed, as in the hostname of the URL (eg, www.lib.umd.edu)</li>
+<li>Not device addressed, as in the hostname of the URL (eg, <a href="http://www.lib.umd.edu">www.lib.umd.edu</a>)</li>
 <li>Addressed by the cryptographic hash of the content</li>
 </ul>
 </section>
@@ -616,28 +616,29 @@ pre .chunk {
   <div class="slide hidden  " id="slide-10">
     <section class="slide-content"><h3 id="demo-getting-started">Demo: Getting Started</h3>
 <p>Install using Homebrew for Mac OS X</p>
-<pre><code>brew install ipfs</code></pre>
-<p>Initialize the local repository</p>
+<pre><code>brew install ipfs
+</code></pre><p>Initialize the local repository</p>
 <pre><code>ipfs init
-ipfs cat /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/readme</code></pre>
-</section>
+ipfs cat /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/readme
+</code></pre></section>
   </div>
   <div class="slide hidden" id="slide-11">
     <section class="slide-content"><h3 id="demo-adding-files">Demo: Adding files</h3>
 <p>Take a picture and it to the local repository</p>
-<pre><code>ipfs add ~/Pictures/Photo\ Booth\ Library/Pictures/XXX.jpg</code></pre>
-<p>Copy the resulting hash</p>
+<pre><code>ipfs add ~/Pictures/Photo\ Booth\ Library/Pictures/XXX.jpg
+</code></pre><p>Copy the resulting hash</p>
 <p>(message = IPFS header + the image file)</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-12">
     <section class="slide-content"><h3 id="demo-getting-files-out">Demo: Getting files out</h3>
 <p>Get the file back out (addressed by hash)</p>
-<pre><code>ipfs cat &lt;hash&gt; | open -f -a /Applications/Preview.app</code></pre>
-<p>Get it from the global gateway?</p>
-<pre><code>curl https://ipfs.io/ipfs/&lt;hash&gt;</code></pre>
-<p>Hash of the picture taken in the ETDG meeting:</p>
-<pre><code>QmSMjLHHGL24mHwjDY9Z4bpn6xfwaniFQqUbSeQaiogzhf</code></pre>
+<pre><code>ipfs cat &lt;hash&gt; | open -f -a /Applications/Preview.app
+</code></pre><p>Get it from the global gateway?</p>
+<pre><code>curl https://ipfs.io/ipfs/&lt;hash&gt;
+</code></pre><p>Hash of the picture taken in the ETDG meeting:</p>
+<pre><code>QmSMjLHHGL24mHwjDY9Z4bpn6xfwaniFQqUbSeQaiogzhf
+</code></pre><p><a href="https://ipfs.io/ipfs/QmSMjLHHGL24mHwjDY9Z4bpn6xfwaniFQqUbSeQaiogzhf">https://ipfs.io/ipfs/QmSMjLHHGL24mHwjDY9Z4bpn6xfwaniFQqUbSeQaiogzhf</a></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-13">
@@ -657,12 +658,12 @@ ipfs cat /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/readme</code></pre
 <pre><code>ipfs id
 ipfs swarm peers
 ipfs daemon
-ipfs swam peers</code></pre>
-<p>Try again to retrieve via the global gateway</p>
-<pre><code>curl https://ipfs.io/ipfs/&lt;hash&gt; | open -f -a /Applications/Preview.app</code></pre>
-<p>Or grab a local copy</p>
-<pre><code>ipfs get &lt;hash&gt;</code></pre>
-</section>
+ipfs swam peers
+</code></pre><p>Try again to retrieve via the global gateway</p>
+<pre><code>curl https://ipfs.io/ipfs/&lt;hash&gt; | open -f -a /Applications/Preview.app
+</code></pre><p>Or grab a local copy</p>
+<pre><code>ipfs get &lt;hash&gt;
+</code></pre></section>
   </div>
   <div class="slide hidden" id="slide-15">
     <section class="slide-content"><h3 id="demo-stream-a-video">Demo: Stream a video</h3>
@@ -676,15 +677,15 @@ ipfs cat QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse/video.mp4 | mplayer -
 ipfs repo gc
 ipfs cat QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse/video.mp4 | mplayer -
 
-# Restart the daemon to get the video again</code></pre>
-</section>
+# Restart the daemon to get the video again
+</code></pre></section>
   </div>
   <div class="slide hidden" id="slide-16">
     <section class="slide-content"><h3 id="demo-mount-in-the-filesystem-via-fuse">Demo: mount in the filesystem via FUSE</h3>
 <pre><code>ipfs mount
 ls /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv
-more /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/about</code></pre>
-</section>
+more /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/about
+</code></pre></section>
   </div>
   <div class="slide hidden" id="slide-17">
     <section class="slide-content"><h3 id="concept-merkle-directed-acyclic-graph-dag-">Concept: Merkle Directed Acyclic Graph (DAG)</h3>
@@ -718,8 +719,8 @@ more /ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/about</code></pre>
 <pre><code>ipfs ls -v QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse
 ipfs ls -v QmRS3Ts9HGTPrNyvHc8GujKJRa3znuEANvE8eK8bdUDAGo
 ipfs ls -v QmQkHpST7LL6zeLkVTFgTmSdbmnQaD8iWkutLhe9UHUvwq
-ipfs ls -v Qma4yxBN8gMB3GotHuM2hhRJ3nZRXr1Pdrj9Fsh1hyKQQT</code></pre>
-<p>Or visit the <a href="http://localhost:5001/ipfs/QmPhnvn747LqwPYMJmQVorMaGbMSgA7mRRoyyZYz3DoZRQ/#/objects/\ipfs\QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse">web interface to your local daemon</a></p>
+ipfs ls -v Qma4yxBN8gMB3GotHuM2hhRJ3nZRXr1Pdrj9Fsh1hyKQQT
+</code></pre><p>Or visit the <a href="http://localhost:5001/ipfs/QmPhnvn747LqwPYMJmQVorMaGbMSgA7mRRoyyZYz3DoZRQ/#/objects/\ipfs\QmTKZgRNwDNZwHtJSjCp6r5FYefzpULfy37JvMt9DwvXse">web interface to your local daemon</a></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-21">
@@ -741,16 +742,16 @@ ipfs ls -v Qma4yxBN8gMB3GotHuM2hhRJ3nZRXr1Pdrj9Fsh1hyKQQT</code></pre>
   </div>
   <div class="slide hidden" id="slide-24">
     <section class="slide-content"><h3 id="demo-ipns">Demo: IPNS</h3>
-<pre><code>ipfs id</code></pre>
-<p><a href="https://ipfs.io/docs/examples/example-viewer/example#../ipns/readme.md">See IPNS example</a></p>
+<pre><code>ipfs id
+</code></pre><p><a href="https://ipfs.io/docs/examples/example-viewer/example#../ipns/readme.md">See IPNS example</a></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h3 id="demo-ipns">Demo: IPNS</h3>
 <p>Also, utilize the DNS system with TXT records</p>
 <pre><code>dig TXT ipfs.io
-ipfs dns ipfs.io</code></pre>
-</section>
+ipfs dns ipfs.io
+</code></pre></section>
   </div>
   <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h3 id="use-cases">Use Cases</h3>
