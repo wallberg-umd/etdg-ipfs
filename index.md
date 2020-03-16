@@ -290,6 +290,8 @@ ipfs dns ipfs.io
 
 ### Use Cases
 
+* [Datasets](https://awesome.ipfs.io/datasets/)
+
 * [Catalonian Referendum](https://gateway.ipfs.io/ipfs/QmQZzfs7LjkEnmG3zU92YF7ViCcuCXkNokuYoiNe6pKvDZ/en/index.html)
 
 * [InterPlanetary Wayback (ipwb)](https://github.com/oduwsdl/ipwb) - facilitates permanence and collaboration in web archives by disseminating the contents of WARC files into the IPFS network.
